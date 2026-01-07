@@ -1,0 +1,18 @@
+{
+  "surface": {
+    "0": { "role": "page" },
+    "1": { "role": "group" },
+    "2": { "role": "container" },
+    "3": { "role": "control" },
+    "4": { "role": "overlay" }
+  },
+  "radius": {
+    "sm": "6px",
+    "md": "8px",
+    "lg": "12px"
+  },
+  "motion": {
+    "fast": "120ms",
+    "base": "180ms"
+  }
+}
