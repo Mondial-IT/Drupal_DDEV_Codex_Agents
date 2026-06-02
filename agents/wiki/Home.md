@@ -1,34 +1,62 @@
 <img src="https://bluemarloc.com/bpiofiles/default_images/logos/mondial-it.nl.png" alt="logo mondial-it.nl">
 
-# Mondial-IT - Drupal - SAAS CMS - Codex
+# Mondial-IT Drupal 11 Codex
 
-___
-## Codex and other CLI agent instructions for the development of the Drupal 11 SAAS platform.
+This wiki documents the repository-specific Codex agent rules for the Mondial-IT Drupal 11 SaaS CMS platform.
 
-These agent instructions detail the specific actions agents can and should take to ensure consistent high quality development of the Drupal 11 SAAS platform as it is in use with our clients.
+The Codex is not a generic Drupal tutorial. It is the working instruction system for AI-assisted development in this repository: how code should be generated, where files belong, how scripts communicate, how tests are run, and how documentation stays aligned with the modules.
 
-For developers, it is a starting point and inspiration on how to set up an enterprise AI developed CMS platform with the necessary guard rails and instructions.
+## Main Goal
 
-Areas where Codex shines:
-* Put up general scaffolds of code
-* Updating documentation
-* Complementing modules with help_topics and .module help
-* Updating code commenting
-* General setup and operations of DDEV, Composer, Ubuntu environment
-* Bug finding and fixing
-* Implementation of features, conforming to general rules (style, tooltips, ...)
+The primary goal is predictable Drupal 11 code generation:
 
-Areas to be careful:
-* Codex has no issue, removing essential pieces of code when it sees fit. Work in small steps and check outcomes.
-* Be aware of rabbit holes, when a solution takes over 10 tries, you probably need to rethink what is happening.
-* Unit tests are a bit shallow, more work is needed i designing the agent rules
+- PHP 8.3 compatible custom modules.
+- Drupal 11 APIs, services, plugins, render arrays, config schema, and cacheability.
+- Safe output, explicit access checks, and no deprecated API additions.
+- Modern Drupal behaviors and library attachment for JavaScript/CSS.
+- Help topics, README updates, and tests included when user-facing behavior changes.
 
+## Code Generation Priority
 
+When Codex changes executable code, apply the rule files in this order:
 
-## Drupal 11
-Drupal 11 is the latest major release of the open-source content management framework widely used for enterprise websites, portals, and headless content APIs. It builds on the stability and modular design of Drupal 10 while modernizing its core to take advantage of the latest versions of PHP, Symfony, and Twig. The platform provides developers with flexible content modeling, multilingual capabilities, and a mature caching system that can scale efficiently for high-traffic environments. Its focus on API-first design makes it ideal for integration with decoupled frontends, mobile apps, and third-party services.
+1. `code-generation.md` - core contract for PHP, JS, Twig, services, plugins, forms, access, cacheability, and tests.
+2. `drupal-rules.md` - shared Drupal 11 implementation safeguards.
+3. Specific Drupal rule files - forms, help topics, demo pages, styling surfaces, and tooltips.
+4. `code-style.md` - formatting, naming, Twig/YAML conventions.
+5. `testing-guidelines.md` - test placement and verification.
+6. `dev-workflow.md` - DDEV, Composer, Drush, and permissions workflow.
 
-For DevOps professionals, Drupal 11 introduces improvements that simplify deployment and maintenance. The core system supports configuration management through YAML files, making environment synchronization easier in CI/CD pipelines. Composer-based dependency management is now the default, enabling more predictable builds and security patching. Combined with containerization tools like Docker and orchestration with Kubernetes, Drupal 11 can be deployed, scaled, and monitored as part of a modern cloud-native infrastructure.
+The specific rule wins when rules overlap.
 
+## Practical Guardrails
 
-___
+- Read the local module pattern before generating new abstractions.
+- Prefer dependency injection over static service lookup.
+- Prefer render arrays and Twig over manual HTML.
+- Attach CSS/JS only through `.libraries.yml`.
+- Add cache metadata whenever output depends on context, permissions, config, or entities.
+- Add config schema for custom config.
+- Add or update help topics and README content when admin-facing behavior changes.
+- Run verification from DDEV unless the task is documentation-only.
+
+## Agents or Skills?
+
+These files should remain repository agents.
+
+They encode local architecture, module naming, DDEV commands, Blue Marloc helper modules, and client-specific conventions. Those rules must travel with the repository.
+
+Create Codex skills only for reusable workflows that make sense outside this project, such as:
+
+- a reusable Drupal module scaffold workflow;
+- a cross-repository GitHub sync/status workflow;
+- an installer for Codex agent bundles across Drupal projects.
+
+Do not convert repository-specific implementation rules into global skills.
+
+## Maintenance Notes
+
+- Keep agent scopes narrow.
+- Update `README.md` and this wiki when the agent map changes.
+- Do not duplicate detailed rules across files; link to the more specific agent instead.
+- When Drupal 11 APIs change, update `code-generation.md` and `drupal-rules.md` first.

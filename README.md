@@ -1,34 +1,59 @@
 <img src="https://bluemarloc.com/bpiofiles/default_images/logos/mondial-it.nl.png" alt="logo mondial-it.nl">
 
-# Mondial-IT - Drupal - SAAS CMS - Codex
+# Mondial-IT Drupal 11 Codex
 
-___
-## Codex and other CLI agent instructions for the development of the Drupal 11 SAAS platform.
+This directory contains the repository-specific Codex instruction system for the Mondial-IT Drupal 11 SaaS CMS platform.
 
-These agent instructions detail the specific actions agents can and should take to ensure consistent high quality development of the Drupal 11 SAAS platform as it is in use with our clients.
+The Codex is used to keep AI-assisted development aligned with the local Drupal architecture, DDEV workflow, embedded Git repositories, documentation rules, and module conventions.
 
-For developers, it is a starting point and inspiration on how to set up an enterprise AI developed CMS platform with the necessary guard rails and instructions.
+## What This Codex Optimizes
 
-Areas where Codex shines:
-* Put up general scaffolds of code
-* Updating documentation
-* Complementing modules with help_topics and .module help
-* Updating code commenting
-* General setup and operations of DDEV, Composer, Ubuntu environment
-* Bug finding and fixing
-* Implementation of features, conforming to general rules (style, tooltips, ...)
+- Drupal 11 and PHP 8.3 compatible code generation.
+- Services, dependency injection, plugins, forms, render arrays, cacheability, config schema, and access checks.
+- Modern Drupal JavaScript behaviors with library-based asset attachment.
+- Consistent help topics, module README files, and wiki pages.
+- DDEV-based Composer, Drush, PHPUnit, phpcs, and permission workflows.
+- Safe Git handling for nested module/theme repositories.
 
-Areas to be careful:
-* Codex has no issue, removing essential pieces of code when it sees fit. Work in small steps and check outcomes.
-* Be aware of rabbit holes, when a solution takes over 10 tries, you probably need to rethink what is happening.
-* Unit tests are a bit shallow, more work is needed i designing the agent rules
+## Agent Map
 
+The scoped agent files live in `codex/agents`.
 
+Start with:
 
-## Drupal 11
-Drupal 11 is the latest major release of the open-source content management framework widely used for enterprise websites, portals, and headless content APIs. It builds on the stability and modular design of Drupal 10 while modernizing its core to take advantage of the latest versions of PHP, Symfony, and Twig. The platform provides developers with flexible content modeling, multilingual capabilities, and a mature caching system that can scale efficiently for high-traffic environments. Its focus on API-first design makes it ideal for integration with decoupled frontends, mobile apps, and third-party services.
+- `codex/agents/codex.md` for the overall model and scope isolation.
+- `codex/agents/README.md` for the active agent map.
+- `codex/agents/code-generation.md` for executable Drupal code.
+- `codex/agents/drupal-rules.md` for shared Drupal 11 implementation safeguards.
+- `codex/agents/dev-workflow.md` for DDEV, Composer, Drush, and permissions.
+- `codex/agents/testing-guidelines.md` for test placement and execution.
 
-For DevOps professionals, Drupal 11 introduces improvements that simplify deployment and maintenance. The core system supports configuration management through YAML files, making environment synchronization easier in CI/CD pipelines. Composer-based dependency management is now the default, enabling more predictable builds and security patching. Combined with containerization tools like Docker and orchestration with Kubernetes, Drupal 11 can be deployed, scaled, and monitored as part of a modern cloud-native infrastructure.
+## Working Model
 
+Each agent has a narrow scope. Do not merge all rules into one prompt:
 
-___
+- Code generation rules do not control README writing.
+- README rules do not control PHP architecture.
+- CI rules do not control tooltip markup.
+- Meta-governance rules only apply when changing the Codex itself.
+
+When scopes overlap, use the more specific rule file.
+
+## Agents or Skills?
+
+Keep these instructions as repository agents. They are tied to this codebase and should be versioned with it.
+
+Use Codex skills only for reusable workflows that should apply across repositories, for example:
+
+- installing a standard Codex agent bundle;
+- scaffolding a generic Drupal module;
+- running a cross-project GitHub sync/status workflow.
+
+Do not turn client-specific architecture, module naming, Blue Marloc helper usage, or DDEV paths into global skills.
+
+## Maintenance
+
+- Update `codex/agents/README.md` when adding or removing agent files.
+- Update `codex/agents/wiki/Home.md` when the overall Codex model changes.
+- Keep detailed implementation rules in the most specific agent file.
+- Check official Drupal coding standards and Drupal core change records when Drupal 11 APIs evolve.

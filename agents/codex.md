@@ -16,21 +16,31 @@ Each section is isolated by design—rules apply **only within their defined sco
 
 Each agent is defined in its own file under `/codex/agents/`, and each file declares its own **scope boundary**.
 
-* README.md
-* code-generation.md
-* code-style.md
-* dev-workflow.md
-* documentation.md
-* meta-governance.md
-* pr-review.md
-* readme-production.md
-* repository-structure.md
-* script-communication.md
-* security.md
-template.md
-* testing-ci.md
-* testing-guidelines.md
-* ui-tooltips.md
+Start with `README.md` for the current agent map.
+
+High-impact code-generation subjects:
+
+* `code-generation.md` - Drupal 11 implementation contract.
+* `drupal-rules.md` - shared Drupal 11 safeguards.
+* `drupal-rules-for-forms.md` - form and AJAX form conventions.
+* `drupal-rules-for-help-topics.md` - admin help-topic generation.
+* `drupal-rules-for-styling-using-surfaces.md` - surface-based UI styling rules.
+* `drupal-rules-for-tooltips-bm_tooltip.md` and `ui-tooltips.md` - shared tooltip usage.
+* `code-style.md` - formatting and naming.
+* `testing-guidelines.md` - test expectations.
+
+Workflow and governance subjects:
+
+* `dev-workflow.md`
+* `repository-structure.md`
+* `script-communication.md`
+* `security.md`
+* `testing-ci.md`
+* `pr-review.md`
+* `documentation.agent.md`
+* `readme-production.md`
+* `meta-governance.md`
+* `template.md`
 ---
 
 ## How To Use the Codex
@@ -39,6 +49,7 @@ template.md
 Determine which agent scope applies:
 
 - Writing code? → **Code Generation Agent**
+- Writing Drupal code? → **Code Generation Agent**, then **Drupal Rules**, then any specific Drupal rule file.
 - Writing a README? → **README Production Agent**
 - Adjusting project layout? → **Repository Structure Agent**
 - Writing tests? → **Testing Agent**
