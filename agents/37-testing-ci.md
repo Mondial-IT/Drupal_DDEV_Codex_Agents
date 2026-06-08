@@ -1,6 +1,6 @@
 ---
 
-# `/codex/agents/testing-ci.md`
+# `/codex/agents/37-testing-ci.md`
 
 # Testing & CI Agent
 

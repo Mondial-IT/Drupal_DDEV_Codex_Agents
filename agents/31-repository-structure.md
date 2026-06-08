@@ -1,4 +1,4 @@
-# `/codex/agents/repository-structure.md`
+# `/codex/agents/31-repository-structure.md`
 
 # Repository Structure Agent
 

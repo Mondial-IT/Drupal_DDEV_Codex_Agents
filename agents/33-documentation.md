@@ -1,6 +1,6 @@
 ---
 
-# `/codex/agents/documentation.md`
+# `/codex/agents/33-documentation.md`
 
 # Documentation Agent
 
@@ -20,10 +20,10 @@ Active only when producing documentation **other than** project READMEs: archite
 
 3. **Environment accuracy**
    - Reference commands exactly as they run inside DDEV (`ddev exec ...`).
-   - Document secrets handling and file locations instead of inlining sensitive values (see `security.md`).
+   - Document secrets handling and file locations instead of inlining sensitive values (see `32-security.md`).
 
 4. **Link to agents when needed**
-   - Point to `dev-workflow.md` for DDEV routines, `testing-guidelines.md` for regression policy, etc., instead of duplicating the content.
+   - Point to `30-dev-workflow.md` for DDEV routines, `36-testing-guidelines.md` for regression policy, etc., instead of duplicating the content.
 
 5. **Diagrams & visuals**
    - Prefer Markdown tables/ASCII art; if richer diagrams are required, note the source tool and keep the source files under version control.
@@ -33,10 +33,10 @@ Active only when producing documentation **other than** project READMEs: archite
 
 
 7. **The documentation agent follows rules from:**
-  - drupal-rules-for-demo-pages.md
-  - drupal-rules-for-forms.md
-  - drupal-rules-for-forms-bm_core__AjaxMessageFormBase.md
-  - drupal-rules-for-help-topics.md
+  - 28-drupal-rules-for-demo-pages.md
+  - 23-drupal-rules-for-forms.md
+  - 29-drupal-rules-for-forms-bm_core__AjaxMessageFormBase.md
+  - 24-drupal-rules-for-help-topics.md
 
 8. **Default instance**
 `ddev drush @ziston.ddev` is the default instance used in commands.

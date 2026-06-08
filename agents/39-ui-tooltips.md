@@ -1,6 +1,6 @@
 
 
-# `/codex/agents/ui-tooltips.md`
+# `/codex/agents/39-ui-tooltips.md`
 
 # Tooltip System Agent
 

@@ -1,7 +1,7 @@
 
 ---
 
-# `/codex/agents/meta-governance.md`
+# `/codex/agents/10-meta-governance.md`
 
 # Meta-Governance Agent
 
@@ -24,5 +24,7 @@ Must not interfere with README rules, code rules, or test rules unless specifica
 * Suggest enhancements that increase clarity and future scalability.
 * Reinforce strict scope boundaries for all agent classes.
 * Avoid redefining rules that belong to specific agents.
+* Keep `00-quick-context.md` in sync whenever any agent file changes.
+* Require explicit agent announcements in the user-facing commentary whenever Codex begins substantive work or changes scope.
 
 ---

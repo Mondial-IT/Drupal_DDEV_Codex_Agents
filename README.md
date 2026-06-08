@@ -18,15 +18,16 @@ The Codex is used to keep AI-assisted development aligned with the local Drupal 
 ## Agent Map
 
 The scoped agent files live in `codex/agents`.
+The numbered filenames are ordered from broader layers to more specific overrides, so lower numbers should be read first.
 
 Start with:
 
 - `codex/agents/codex.md` for the overall model and scope isolation.
 - `codex/agents/README.md` for the active agent map.
-- `codex/agents/code-generation.md` for executable Drupal code.
-- `codex/agents/drupal-rules.md` for shared Drupal 11 implementation safeguards.
-- `codex/agents/dev-workflow.md` for DDEV, Composer, Drush, and permissions.
-- `codex/agents/testing-guidelines.md` for test placement and execution.
+- `codex/agents/20-code-generation.md` for executable Drupal code.
+- `codex/agents/22-drupal-rules.md` for shared Drupal 11 implementation safeguards.
+- `codex/agents/30-dev-workflow.md` for DDEV, Composer, Drush, and permissions.
+- `codex/agents/36-testing-guidelines.md` for test placement and execution.
 
 ## Working Model
 

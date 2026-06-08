@@ -4,7 +4,7 @@ scope: Drupal 11 code rules shared by custom modules and themes
 
 # Drupal 11 Rules
 
-This file contains Drupal-specific implementation rules that support `code-generation.md`.
+This file contains Drupal-specific implementation rules that support `20-code-generation.md`.
 It applies when changing code under `drupal_root/web/modules/custom` or `drupal_root/web/themes/custom`.
 
 ## Drupal 11 Baseline
@@ -81,8 +81,8 @@ To open links in Drupal’s off-canvas sidebar:
 
 ## Related Rules
 
-- drupal-rules-for-demo-pages.md
-- drupal-rules-for-forms.md
-- drupal-rules-for-forms-bm_core__AjaxMessageFormBase.md
-- drupal-rules-for-help-topics.md
-- drupal-rules-for-styling-using-surfaces.md
+- 28-drupal-rules-for-demo-pages.md
+- 23-drupal-rules-for-forms.md
+- 29-drupal-rules-for-forms-bm_core__AjaxMessageFormBase.md
+- 24-drupal-rules-for-help-topics.md
+- 25-drupal-rules-for-styling-using-surfaces.md

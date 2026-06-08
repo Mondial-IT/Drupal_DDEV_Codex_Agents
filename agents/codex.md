@@ -15,32 +15,35 @@ Each section is isolated by design—rules apply **only within their defined sco
 ## Directory Structure
 
 Each agent is defined in its own file under `/codex/agents/`, and each file declares its own **scope boundary**.
+The leading numeric prefix is part of the hierarchy: lower numbers are broader and loaded first; higher numbers are more specific and should be treated as stronger overrides within their domain.
 
 Start with `README.md` for the current agent map.
+Use `00-quick-context.md` as the short-form entrypoint when you need a fast overview before reading the full agent files.
 
 High-impact code-generation subjects:
 
-* `code-generation.md` - Drupal 11 implementation contract.
-* `drupal-rules.md` - shared Drupal 11 safeguards.
-* `drupal-rules-for-forms.md` - form and AJAX form conventions.
-* `drupal-rules-for-help-topics.md` - admin help-topic generation.
-* `drupal-rules-for-styling-using-surfaces.md` - surface-based UI styling rules.
-* `drupal-rules-for-tooltips-bm_tooltip.md` and `ui-tooltips.md` - shared tooltip usage.
-* `code-style.md` - formatting and naming.
-* `testing-guidelines.md` - test expectations.
+* `20-code-generation.md` - Drupal 11 implementation contract.
+* `22-drupal-rules.md` - shared Drupal 11 safeguards.
+* `23-drupal-rules-for-forms.md` - form and AJAX form conventions.
+* `24-drupal-rules-for-help-topics.md` - admin help-topic generation.
+* `25-drupal-rules-for-styling-using-surfaces.md` - surface-based UI styling rules.
+* `26-drupal-rules-for-tooltips-bm_tooltip.md` and `39-ui-tooltips.md` - shared tooltip usage.
+* `21-code-style.md` - formatting and naming.
+* `36-testing-guidelines.md` - test expectations.
 
 Workflow and governance subjects:
 
-* `dev-workflow.md`
-* `repository-structure.md`
-* `script-communication.md`
-* `security.md`
-* `testing-ci.md`
-* `pr-review.md`
-* `documentation.agent.md`
-* `readme-production.md`
-* `meta-governance.md`
-* `template.md`
+* `30-dev-workflow.md`
+* `31-repository-structure.md`
+* `38-init-and-install-scripts.md`
+* `32-security.md`
+* `37-testing-ci.md`
+* `35-pr-review.md`
+* `33-documentation.md`
+* `34-readme-production.md`
+* `10-meta-governance.md`
+* `00-quick-context.md`
+* `11-template.md`
 ---
 
 ## How To Use the Codex
@@ -58,6 +61,8 @@ Determine which agent scope applies:
 - Creating UI tooltips? → **Tooltip Agent**
 - Updating CI workflows? → **Testing & CI Agent**
 - Editing the Codex itself? → **Meta-Governance Agent**
+
+Before substantive work begins, say which agent(s) you are using. If the task crosses into a new scope, announce the switch.
 
 If the task falls outside all scopes, use general documentation under `/codex/sections`.
 

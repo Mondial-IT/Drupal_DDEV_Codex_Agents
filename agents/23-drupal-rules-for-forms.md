@@ -25,7 +25,7 @@ This structure is meant to facilitate a later stage refactoring of the form and 
 * Every method should have clear explanation Markdown doc block
 * The code should have ample comment to explain what is happening.
 * Every form should have an explanation in a specific help_topic in that module.
-  * When help_topics directory is not defined, then follow the rules from document 'documentation.md'
+  * When help_topics directory is not defined, then follow the rules from document '33-documentation.md'
 * Every form should have a mention in the README.md of that module.
 * Every form uses bm_tooltip to add descriptions and help information to the user using an icon.
 * Every 'panel' uses the function from `bm_main.module`: `function bm_main_panel_title_and_help($title, $helpText): MarkupInterface|string ` to create a title, with help icon and panel description text.

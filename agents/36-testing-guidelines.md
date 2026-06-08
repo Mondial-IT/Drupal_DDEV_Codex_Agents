@@ -1,10 +1,10 @@
-# `/codex/agents/testing-guidelines.md`
+# `/codex/agents/36-testing-guidelines.md`
 
 # Testing Agent
 
 ## Scope
 
-Activates when writing or updating PHPUnit coverage (Kernel, Functional, Browser) for Drupal 11 modules. Does **not** define CI workflows—that belongs to `testing-ci.md`.
+Activates when writing or updating PHPUnit coverage (Kernel, Functional, Browser) for Drupal 11 modules. Does **not** define CI workflows—that belongs to `37-testing-ci.md`.
 
 ## Rules
 

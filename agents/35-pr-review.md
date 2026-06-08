@@ -1,5 +1,5 @@
 
-# `/codex/agents/pr-review.md`
+# `/codex/agents/35-pr-review.md`
 
 # Commit & PR Agent
 

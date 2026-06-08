@@ -20,12 +20,12 @@ The primary goal is predictable Drupal 11 code generation:
 
 When Codex changes executable code, apply the rule files in this order:
 
-1. `code-generation.md` - core contract for PHP, JS, Twig, services, plugins, forms, access, cacheability, and tests.
-2. `drupal-rules.md` - shared Drupal 11 implementation safeguards.
+1. `20-code-generation.md` - core contract for PHP, JS, Twig, services, plugins, forms, access, cacheability, and tests.
+2. `22-drupal-rules.md` - shared Drupal 11 implementation safeguards.
 3. Specific Drupal rule files - forms, help topics, demo pages, styling surfaces, and tooltips.
-4. `code-style.md` - formatting, naming, Twig/YAML conventions.
-5. `testing-guidelines.md` - test placement and verification.
-6. `dev-workflow.md` - DDEV, Composer, Drush, and permissions workflow.
+4. `21-code-style.md` - formatting, naming, Twig/YAML conventions.
+5. `36-testing-guidelines.md` - test placement and verification.
+6. `30-dev-workflow.md` - DDEV, Composer, Drush, and permissions workflow.
 
 The specific rule wins when rules overlap.
 
@@ -59,4 +59,4 @@ Do not convert repository-specific implementation rules into global skills.
 - Keep agent scopes narrow.
 - Update `README.md` and this wiki when the agent map changes.
 - Do not duplicate detailed rules across files; link to the more specific agent instead.
-- When Drupal 11 APIs change, update `code-generation.md` and `drupal-rules.md` first.
+- When Drupal 11 APIs change, update `20-code-generation.md` and `22-drupal-rules.md` first.

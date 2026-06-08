@@ -1,4 +1,4 @@
-# `/codex/agents/code-style.md`
+# `/codex/agents/21-code-style.md`
 
 # Coding Style Agent
 
@@ -31,4 +31,4 @@ Activates only when tasks involve conventions (formatting, naming, file placemen
 ### Front-end specifics
 - JavaScript relies on modern ES modules / Drupal behaviors; avoid jQuery unless Drupal core requires it.
 - CSS variables default to ASCII names and, when they are provided from markup (e.g. `style="--bm-panel-columns"`), declare them via `@property` to keep IDEs quiet.
-- Tooltips use the shared `bm_tooltip` patterns described in `ui-tooltips.md`; do not embed tooltip text directly in CSS.
+- Tooltips use the shared `bm_tooltip` patterns described in `39-ui-tooltips.md`; do not embed tooltip text directly in CSS.

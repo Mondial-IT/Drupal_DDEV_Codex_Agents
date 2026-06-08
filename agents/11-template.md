@@ -1,7 +1,7 @@
 
 ---
 
-# `/codex/agents/TEMPLATE.md`
+# `/codex/agents/11-template.md`
 
 # Agent Template
 

@@ -1,4 +1,4 @@
-# `/codex/agents/dev-workflow.md`
+# `/codex/agents/30-dev-workflow.md`
 
 # Build & Development Workflow Agent
 
@@ -33,7 +33,7 @@ Does **not** handle documentation, CI definitions, or commit/PR conventions.
 ### 6. Testing & verification hooks
 - Launch PHPUnit from DDEV (`ddev exec phpunit -c web/core/phpunit.xml.dist modules/custom/<module>/tests`).
 - For richer output and logging, use the bundled runner `ddev test …` (unit/kernel/functional/module). `-v/-vv/-vvv` control verbosity, and logs land in `.ddev/phpunit_logs/` (per-test log files, `summary.tsv`, and optional coverage HTML).
-- For coding standards, run `ddev exec phpcs web/modules/custom --standard=Drupal,DrupalPractice` (see `code-style.md`).
+- For coding standards, run `ddev exec phpcs web/modules/custom --standard=Drupal,DrupalPractice` (see `21-code-style.md`).
 
 ### 7. Local bulk data
 - Keep temporary imports/logs under `/database` and `/apache_logs` locally and delete them before pushing changes.
