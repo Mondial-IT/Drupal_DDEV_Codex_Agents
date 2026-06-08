@@ -8,6 +8,7 @@ orient quickly before reading the narrower rules.
 
 - Drupal 11 development in this repository
 - Host-side init/install automation under `.scripts/.vpscontainer/`
+- DDEV-side init/install automation under `.scripts/.ddev/`
 - Web control panel work under `.scripts/web_install_control_panel/`
 - Documentation and repo layout changes under `codex/agents/`
 
@@ -24,7 +25,7 @@ orient quickly before reading the narrower rules.
 - `22-drupal-rules.md` for shared Drupal safeguards
 - `30-dev-workflow.md` for DDEV, Composer, and Drush routines
 - `31-repository-structure.md` for directory layout and embedded repos
-- `38-init-and-install-scripts.md` for host-side init/install shell automation
+- `38-init-and-install-scripts.md` for host-side and DDEV-side init/install shell automation, including prerequisite bootstrap installers
 - `32-security.md` for secrets and permissions
 - `36-testing-guidelines.md` and `37-testing-ci.md` for verification
 - `33-documentation.md` and `34-readme-production.md` for docs
@@ -38,4 +39,5 @@ When it switches scope, it should say so explicitly.
 ## Maintenance rule
 
 If any file under `codex/agents/` changes, update this quick-context file in the
-same change so the summary stays aligned with the active agent set.
+same change so the summary stays aligned with the active agent set. This
+includes changes to agent names, hierarchy, or the install/init rule set.

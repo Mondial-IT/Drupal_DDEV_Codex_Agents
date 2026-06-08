@@ -6,6 +6,7 @@ Activates for shell scripts that install, initialize, bootstrap, verify, or
 update machine-side components inside this repository, especially:
 
 - `/.scripts/.vpscontainer/*.sh`
+- `/.scripts/.ddev/*.sh`
 - `/.scripts/*.sh` automation that orchestrates system setup
 - `init_*.sh` and `install_*.sh` scripts that are part of the setup flow
 
@@ -41,6 +42,7 @@ agents.
 4. **Install flow design**
    - Keep installation work in `install_*.sh` scripts.
    - Keep orchestration and sequencing in `init_*.sh` scripts.
+   - Allow a higher-level init script to bootstrap a prerequisite installer when a required dependency is missing, but keep the prerequisite installer itself in an `install_*.sh` file.
    - Prefer helper scripts over duplicated inline logic.
    - Use the repository’s verification helpers when the script already relies
      on them.
